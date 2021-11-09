@@ -46,7 +46,6 @@ public class Principal extends AppCompatActivity {
     }
     public void volver(View W){
         Intent I = new Intent(getApplicationContext(),MainActivity.class);
-
         startActivity(I);
 
     }
