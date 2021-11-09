@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Principal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imagen1"
+                android:layout_width="191dp"
+                android:layout_height="187dp"
+                app:srcCompat="@mipmap/images3"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/imagen2"
+                android:layout_width="197dp"
+                android:layout_height="166dp"
+                app:srcCompat="@mipmap/images2" />
+
+            <ImageButton
+                android:id="@+id/toMaps"
+                android:layout_width="219dp"
+                android:layout_height="160dp"
+                app:srcCompat="@mipmap/map" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/Boton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="volver"
+                    android:text="Volver" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="516dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/FirstImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Imagen Nº1" />
+
+            <TextView
+                android:id="@+id/SecIMG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="200dp"
+                android:text="Imagen Nº2" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="200dp"
+                android:text="Ir a mapas" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
