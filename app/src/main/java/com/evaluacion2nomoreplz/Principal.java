@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 
 public class Principal extends AppCompatActivity {
     double lat,lon;
+    String Dato;
     ImageButton primera,segunda,tercera;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,9 @@ public class Principal extends AppCompatActivity {
 
 
         Bundle B = getIntent().getExtras();
-        String Dato=B.getString("Lugar");
+        String Dato=B.getString("nombre");
+        lat = B.getDouble("lat");
+        lon = B.getDouble("lon");
         if (Dato.equals("Cementerio de parral")){
             double lat=-36.124123177155205;
             double lon=-71.82145176890415;
@@ -44,6 +47,13 @@ public class Principal extends AppCompatActivity {
         }
 
     }
+    public void iramapas(View W)
+    {
+        Intent I = new Intent(getApplicationContext(),MapaListoko.class);
+        I.putExtra("lat",lat);I.putExtra("lon",lon);I.putExtra("nombre",Dato);
+        startActivity(I);
+    }
+
     public void volver(View W){
         Intent I = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(I);

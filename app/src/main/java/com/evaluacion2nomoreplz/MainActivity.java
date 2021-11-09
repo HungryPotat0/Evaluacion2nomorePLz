@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     public void Letsgo(View W){
         String ubi=ubicacion.getSelectedItem().toString();
         Intent I = new Intent(getApplicationContext(),Principal.class);
-        I.putExtra("Lugar",ubi);
+        I.putExtra("nombre",ubi);
         startActivity(I);
 
     }
